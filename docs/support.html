@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CollageX Support</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+        --ink: #1a1a1a;
+        --ink-secondary: #6b6459;
+        --ink-body: #3d382f;
+        --page: #faf8f5;
+        --card: #ffffff;
+        --line: #ece6db;
+        --switch: #f0ebe2;
+        --accent: #6f5638;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --ink: #f2efe9;
+          --ink-secondary: #a8a196;
+          --ink-body: #d9d4cb;
+          --page: #161514;
+          --card: #22201e;
+          --line: #34312d;
+          --switch: #2a2826;
+          --accent: #d9b98f;
+        }
+      }
+
+      body {
+        margin: 0;
+        padding: 40px 20px 64px;
+        color: var(--ink);
+        background: var(--page);
+      }
+
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 32px;
+        line-height: 1.2;
+      }
+
+      h2 {
+        margin: 40px 0 12px;
+        font-size: 22px;
+        line-height: 1.3;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 8px;
+      }
+
+      p {
+        line-height: 1.65;
+      }
+
+      a {
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      .subtitle {
+        margin-top: 0;
+        color: var(--ink-secondary);
+      }
+
+      .lang-switch {
+        display: inline-flex;
+        gap: 4px;
+        margin-bottom: 28px;
+        padding: 4px;
+        background: var(--switch);
+        border-radius: 10px;
+      }
+
+      .lang-switch button {
+        border: none;
+        background: transparent;
+        padding: 6px 16px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--ink-secondary);
+        cursor: pointer;
+      }
+
+      .lang-switch button.active {
+        background: var(--card);
+        color: var(--accent);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      }
+
+      details {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 14px 18px;
+        margin-bottom: 10px;
+      }
+
+      details summary {
+        cursor: pointer;
+        font-weight: 600;
+        line-height: 1.5;
+      }
+
+      details p {
+        margin: 10px 0 4px;
+        color: var(--ink-body);
+      }
+
+      .contact-card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 20px 22px;
+        margin-top: 16px;
+      }
+
+      .contact-card p {
+        margin: 6px 0;
+      }
+
+      footer {
+        margin-top: 48px;
+        font-size: 13px;
+        color: var(--ink-secondary);
+        text-align: center;
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" id="btn-en" class="active" aria-pressed="true">English</button>
+        <button type="button" id="btn-zh" aria-pressed="false">简体中文</button>
+      </div>
+
+      <!-- English -->
+      <section id="content-en" lang="en">
+        <h1>CollageX Support</h1>
+        <p class="subtitle">Help and frequently asked questions for CollageX.</p>
+
+        <p>
+          CollageX helps you turn your photos into collages and stories with
+          templates, text, and stickers on iPhone and iPad. Your projects stay
+          on your device.
+        </p>
+
+        <h2>Frequently Asked Questions</h2>
+
+        <details>
+          <summary>Where are my projects stored?</summary>
+          <p>
+            Projects, and the photos you add to them, are stored only in the
+            app's private storage on your device. CollageX has no account and
+            does not upload your projects or photos.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can CollageX see my whole photo library?</summary>
+          <p>
+            No. CollageX uses the system photo picker, so the app only receives
+            the photos you select. The selected photos are copied into the
+            project so it keeps working even if you later edit or delete the
+            originals.
+          </p>
+        </details>
+
+        <details>
+          <summary>Why does CollageX ask for access to Photos?</summary>
+          <p>
+            Only when you tap Save to Photos. CollageX asks for add-only access,
+            which lets it save finished projects to your library but not read
+            your existing photos. If you decline, you can still share a project
+            with the Share button, or allow access later in the Settings app
+            under CollageX &gt; Photos.
+          </p>
+        </details>
+
+        <details>
+          <summary>Do exported images include location or camera details?</summary>
+          <p>
+            No. Exported images are newly rendered and do not include EXIF
+            metadata such as location from the original photos.
+          </p>
+        </details>
+
+        <details>
+          <summary>How do I delete my projects?</summary>
+          <p>
+            Delete a project from the project library. This also deletes the
+            photo copies stored in it. Uninstalling CollageX deletes all of its
+            data. Images you saved to Photos and the originals in your library
+            are not affected.
+          </p>
+        </details>
+
+        <details>
+          <summary>Do my projects sync across devices?</summary>
+          <p>
+            No. Projects stay on the device where you created them. If you use
+            iCloud Backup or back up your device to a computer, iOS may include
+            CollageX data in the backup, and restoring that backup restores
+            your projects.
+          </p>
+        </details>
+
+        <details>
+          <summary>Why do some fonts need to be downloaded?</summary>
+          <p>
+            To keep the app small, some fonts are downloaded from Apple the
+            first time you use them. Make sure you are connected to the
+            internet. If a download does not finish, try again later.
+          </p>
+        </details>
+
+        <details>
+          <summary>How do I change the app language?</summary>
+          <p>
+            In CollageX, open Settings and tap App Language. This opens the
+            CollageX page in the Settings app, where you can choose English or
+            Simplified Chinese.
+          </p>
+        </details>
+
+        <details>
+          <summary>I found a bug or have a feature request.</summary>
+          <p>
+            We'd love to hear from you. In CollageX, go to Settings &gt; About
+            CollageX &gt; Contact Us. The email is pre-filled with your CollageX
+            version, iOS version, and device model. Add a short description of
+            the issue. Screenshots help a lot.
+          </p>
+        </details>
+
+        <h2>Contact Us</h2>
+        <div class="contact-card">
+          <p><strong>Email:</strong> <a href="mailto:cog4init@gmail.com">cog4init@gmail.com</a></p>
+          <p>We usually reply within 1–3 business days.</p>
+        </div>
+
+        <h2>Privacy</h2>
+        <p>
+          Read the full <a href="./privacy-policy-en">CollageX Privacy Policy</a>
+          to learn what data the app processes and what it does not do.
+        </p>
+      </section>
+
+      <!-- 简体中文 -->
+      <section id="content-zh" lang="zh-CN" hidden>
+        <h1>CollageX 支持</h1>
+        <p class="subtitle">CollageX 帮助与常见问题。</p>
+
+        <p>
+          CollageX 帮你用模版、文字和贴纸，在 iPhone 和 iPad 上把照片做成拼贴和故事。
+          你的作品只保存在你自己的设备上。
+        </p>
+
+        <h2>常见问题</h2>
+
+        <details>
+          <summary>我的作品保存在哪里？</summary>
+          <p>
+            作品以及加入作品的照片只保存在设备上的应用私有存储中。CollageX 没有账号，
+            不会上传你的作品或照片。
+          </p>
+        </details>
+
+        <details>
+          <summary>CollageX 能看到我的整个相册吗？</summary>
+          <p>
+            不能。CollageX 使用系统照片选择器，只能拿到你选中的照片。选中的照片会被复制到作品中，
+            这样即使之后编辑或删除原图，作品仍能正常打开。
+          </p>
+        </details>
+
+        <details>
+          <summary>为什么需要相册权限？</summary>
+          <p>
+            只有在点按“存储到相册”时才会申请。CollageX 申请的是“仅添加”权限，
+            只能把完成的作品存入相册，不能读取你已有的照片。拒绝后仍可通过“分享”导出作品，
+            也可以稍后在系统“设置”&gt;“CollageX”&gt;“照片”中开启。
+          </p>
+        </details>
+
+        <details>
+          <summary>导出的图片会包含地点或相机信息吗？</summary>
+          <p>
+            不会。导出的图片由应用重新绘制生成，不包含原照片中的地点等 EXIF 元数据。
+          </p>
+        </details>
+
+        <details>
+          <summary>如何删除我的作品？</summary>
+          <p>
+            在作品库中删除作品即可，作品中保存的照片副本会一并删除。卸载 CollageX 会删除它的全部数据。
+            已存储到相册的图片和相册中的原图不受影响。
+          </p>
+        </details>
+
+        <details>
+          <summary>作品会在多台设备间同步吗？</summary>
+          <p>
+            不会。作品只保存在创建它的设备上。如果你使用 iCloud 云备份或将设备备份到电脑，
+            iOS 可能会把 CollageX 的数据包含在备份中，从备份恢复设备时作品也会一并恢复。
+          </p>
+        </details>
+
+        <details>
+          <summary>为什么有些字体需要下载？</summary>
+          <p>
+            为了减小应用体积，部分字体会在首次使用时从 Apple 下载。请确认设备已连接网络；
+            如果下载没有完成，请稍后重试。
+          </p>
+        </details>
+
+        <details>
+          <summary>如何更改 App 语言？</summary>
+          <p>
+            在 CollageX 中打开“设置”，点按“App 语言”，会跳转到系统“设置”中的 CollageX 页面，
+            在那里可以选择简体中文或英文。
+          </p>
+        </details>
+
+        <details>
+          <summary>我发现了问题，或者想提功能建议。</summary>
+          <p>
+            欢迎联系我们。在 CollageX 中进入“设置”&gt;“关于 CollageX”&gt;“联系我们”，
+            邮件会自动附上 CollageX 版本、iOS 版本和设备型号，请再补充问题的简单描述，截图会很有帮助。
+          </p>
+        </details>
+
+        <h2>联系我们</h2>
+        <div class="contact-card">
+          <p><strong>邮箱：</strong><a href="mailto:cog4init@gmail.com">cog4init@gmail.com</a></p>
+          <p>我们通常会在 1–3 个工作日内回复。</p>
+        </div>
+
+        <h2>隐私</h2>
+        <p>
+          请阅读完整的<a href="./privacy-policy-zh">CollageX 隐私政策</a>，
+          了解应用会处理哪些数据，以及我们不会做什么。
+        </p>
+      </section>
+
+      <footer>© 2026 CollageX</footer>
+    </main>
+
+    <script>
+      (function () {
+        var btnEn = document.getElementById('btn-en');
+        var btnZh = document.getElementById('btn-zh');
+        var en = document.getElementById('content-en');
+        var zh = document.getElementById('content-zh');
+
+        function setLang(lang, remember) {
+          var isZh = lang === 'zh';
+          en.hidden = isZh;
+          zh.hidden = !isZh;
+          btnEn.classList.toggle('active', !isZh);
+          btnZh.classList.toggle('active', isZh);
+          btnEn.setAttribute('aria-pressed', String(!isZh));
+          btnZh.setAttribute('aria-pressed', String(isZh));
+          document.documentElement.lang = isZh ? 'zh-CN' : 'en';
+          document.title = isZh ? 'CollageX 支持' : 'CollageX Support';
+          if (remember) {
+            try { localStorage.setItem('collagex-lang', lang); } catch (e) {}
+          }
+        }
+
+        btnEn.addEventListener('click', function () { setLang('en', true); });
+        btnZh.addEventListener('click', function () { setLang('zh', true); });
+
+        // 优先级：网址参数 ?lang=zh|en（App 内入口按当前语言传入）> 用户上次的选择 > 浏览器语言。
+        var requested = null;
+        try { requested = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+        var saved = null;
+        try { saved = localStorage.getItem('collagex-lang'); } catch (e) {}
+        var lang = requested === 'zh' || requested === 'en'
+          ? requested
+          : (saved || (/^zh/i.test(navigator.language || '') ? 'zh' : 'en'));
+        if (lang === 'zh') {
+          setLang('zh', false);
+        }
+      })();
+    </script>
+  </body>
+</html>
